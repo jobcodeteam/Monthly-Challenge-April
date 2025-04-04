@@ -1,162 +1,82 @@
-## 🌟 **Backend Developer Challenge – Recipe Galaxy!** 🌍🍳  
+# 🚀 Full-Stack Developer Challenge – Recipe Galaxy! 🍽️✨  
 **Monthly Challenge – April 2025**
 
-### 👨‍🍳 Build a Deliciously Scalable Recipe API – Your Way!
+Welcome to **Recipe Galaxy**, your mission is to build a full-stack recipe management platform that is fast, scalable, and beautiful — covering everything from API design to frontend polish.
+
+> 🛠️ **Tech Stack:** Use any modern stack — Node.js, Express, React, TailwindCSS, MongoDB/PostgreSQL, Redis, Docker, etc.  
+> 📌 **Choose your area of focus**: You can work on the frontend, the backend, or both!
 
 ---
 
-### 🎯 **Objective**
-Design and implement a **Recipe Management API** using *any backend technology you love* (Node.js, Django, FastAPI, Go, etc.).
+## 🎯 Your Objective
 
-Your mission: Build a high-performance, developer-friendly, and feature-rich backend that powers the **ultimate recipe sharing app**. Focus on real-world features like caching, filtering, pagination, clean architecture, and testing. Bonus if it’s Dockerized & well-documented!
+Build a full-stack Recipe App with:
 
----
-
-### 🧠 **What You'll Be Judged On**
-- REST API design and structure
-- Code quality, modularity & readability
-- Real-world features: pagination, filtering, etc.
-- Redis caching strategy
-- Testing strategy & coverage
-- Git hygiene & commit structure
-- Documentation quality
-- Bonus points for Docker support and deploy readiness
+- ✅ A RESTful API for managing recipes (Backend)
+- 🎨 A beautiful, responsive UI to browse and create recipes (Frontend)
+- ⚡ Caching, search, pagination, validation, and testing
+- 📦 Docker support and clean documentation
 
 ---
 
-### 🧾 **Feature Requirements**
+## 🧠 Evaluation Criteria
 
-#### 📦 1. Recipe Model
-Each recipe should include:
-- `title`: string (required)
-- `ingredients`: array of strings (required)
-- `instructions`: rich text or plain string (required)
-- `difficulty`: one of `easy`, `medium`, `hard`
-- `prepTime`: number (in minutes)
-- `createdAt`: timestamp (default now)
-
-👉 Add **validation rules** & **defaults** based on your stack.
-
----
-
-#### ⚙️ 2. RESTful API Endpoints
-Design the following routes:
-- `GET /recipes` – list all recipes
-- `POST /recipes` – create a new recipe
-- `GET /recipes/:id` – fetch a single recipe
-- `PUT /recipes/:id` – update a recipe
-- `DELETE /recipes/:id` – delete a recipe
-
-🔧 Bonus Route:
-- `GET /recipes/stats` – returns:
-  - total recipe count
-  - average prep time
-  - recipe count per difficulty
+| Area               | What We Look For                              |
+|--------------------|-----------------------------------------------|
+| 💻 Code Quality     | Clean, readable, modular, and well-documented |
+| 📐 Architecture     | Proper folder structure & separation of logic |
+| 🎨 UI/UX            | Neat, responsive, and accessible interfaces   |
+| ⚙️ API Design       | RESTful, well-structured, secure               |
+| ⚡ Performance      | Caching, filtering, and pagination             |
+| ✅ Testing          | Unit/integration tests with good coverage      |
+| 🐙 Git Practices    | Clear, atomic commits with meaningful messages|
 
 ---
 
-#### 🔍 3. Pagination, Filtering & Search
-Your `GET /recipes` endpoint should support:
-- Pagination: `?page=1&limit=10`
-- Search by title: `?search=pasta`
-- Filter by difficulty and max prep time:  
-  `?difficulty=easy&maxPrepTime=30`
+## 🛣️ Choose Your Path
+
+> 📂 The main branch is just the overview. Depending on your skill set, switch to the relevant branch below:
+
+### 🔧 Backend Developer?
+> 👉 Go to the [`backend`](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/tree/backend) branch  
+There you'll find the full **Backend Challenge** with API specs, caching, Redis, and testing instructions.
+
+### 🎨 Frontend Developer?
+> 👉 Go to the [`frontend`](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/tree/frontend) branch  
+There you'll find the complete **Frontend Challenge** with Tailwind UI, routing, state management, and more.
 
 ---
 
-#### ⚡ 4. Redis Caching
-Use **Redis** to cache:
-- Individual recipe fetches (`/recipes/:id`)
-- Popular search queries with pagination
-
-⏱️ Set a cache TTL (e.g. 1 hour)  
-♻️ Invalidate cache on updates or deletions
-
----
-
-#### 🔐 5. Environment Configuration
-- Use `.env` or your stack’s config strategy
-- Secrets like DB URLs, Redis host, ports, etc., must be configurable
+## 🏆 Bonus Points (Optional)
+- 🧑‍🍳 User authentication and recipe ownership
+- 💬 Likes, comments, or ratings on recipes
+- 🌗 Dark mode toggle
+- ☁️ Image upload (Multer + Cloudinary or similar)
+- 🌐 Live deployment (Vercel, Render, Heroku, etc.)
 
 ---
 
-#### ✅ 6. Testing Suite
-Write **unit & integration tests** using your preferred framework:
-- Test model validations
-- Test API responses & status codes
-- Test Redis caching logic (mock Redis if needed)
+## 📬 Submission Guidelines
 
-📈 Aim for **80%+ coverage**
-
----
-
-#### 🧹 7. Code Quality
-- Follow best practices of your chosen language
-- Use a linter (`ESLint`, `flake8`, `golangci-lint`, etc.)
-- Modular folder structure (routes, controllers, services, etc.)
-- Use Prettier or formatter to keep the code tidy
+1. **Fork the repo** or clone it
+2. Complete the challenge in the `frontend` or `backend` branch
+3. Push your code to a **public GitHub repo**
+4. Open an issue in the original challenge repo with the tag:
+   - `#RecipeFrontend` or `#RecipeBackend`
+5. Tag `@theakshaydhiman` in the issue for review
+6. Bonus: Share your **live deployed link**!
 
 ---
 
-#### 🐳 8. Docker & Docker Compose (Bonus)
-Add a `Dockerfile` and `docker-compose.yml`:
-- App service
-- DB (MongoDB/PostgreSQL/MySQL)
-- Redis
+## 💡 Tip: Use Conventional Commits
 
-🧪 Optional: Add a service for running tests!
-
----
-
-#### 📘 9. README.md
-Your documentation should include:
-- 📦 Project setup (manual + Docker)
-- 🔌 API reference with curl examples
-- ⚙️ How caching works
-- 🧪 How to run tests
-- 🙌 Contribution guide
-
-Make it clean, beginner-friendly, and stylish!
-
----
-
-#### 🐙 10. Git & Repo Hygiene
-- Follow **conventional commit** messages:
-  - `feat: add recipe stats endpoint`
-  - `fix: correct pagination logic`
-  - `docs: update README with API usage`
-- Push your code to a **public GitHub repo**
-- Keep your commits small & meaningful
-
----
-
-### 📡 **Sample API Requests**
 ```bash
-# Get first 5 recipes
-curl http://localhost:3000/recipes?page=1&limit=5
-
-# Search recipes by keyword
-curl http://localhost:3000/recipes?search=chicken
-
-# Filter by difficulty and max prep time
-curl http://localhost:3000/recipes?difficulty=easy&maxPrepTime=20
+feat: add recipe card component
+fix: handle API error on fetch
+chore: setup docker-compose for full-stack
 ```
 
 ---
 
-### 💥 **Bonus Features (Optional but Impressive)**
-- ✅ User Auth (JWT or OAuth) and recipe ownership
-- ⭐ Like/favorite recipes
-- 📝 User comments or ratings
-- 📸 Image upload support (Multer, Cloudinary, S3, etc.)
-- 🌍 Deploy to Render/Heroku/Vercel/AWS
-
----
-
-### 🚀 Submission Guidelines
-- Create a GitHub repo (e.g., `Recipe-Galaxy-April`)
-- Complete your project
-- Open an issue in our challenge repo with the tag `#RecipeBackend`
-- Mention `@jobcodeteam` for review
-- Share your repo link (must be public)
-
+Ready to build the tastiest full-stack project of the month? 🍜  
+**Good luck and happy coding!** 🚀
