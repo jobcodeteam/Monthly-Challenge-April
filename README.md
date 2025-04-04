@@ -1,4 +1,4 @@
-# 🚀 Full-Stack Developer Challenge – Recipe Galaxy! 🍽️✨  
+# Full-Stack Developer Challenge – Recipe Galaxy! 🍽️  
 **Monthly Challenge – April 2025**
 
 Welcome to **Recipe Galaxy**, your mission is to build a full-stack recipe management platform that is fast, scalable, and beautiful — covering everything from API design to frontend polish.
